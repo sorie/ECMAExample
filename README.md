@@ -1,5 +1,4 @@
-# jsExample
-Record the latest javascript since Ecma Script 5
+# ECMA script record
 
 ### optional chaining & Template Literals
 "?." => optional chaining ES11부터 도입된 연산자이다. <br/>
