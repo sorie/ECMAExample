@@ -44,3 +44,45 @@ async function displayUser() {
 }
 </code></pre>
 
+`
+await 와 Promise#then을 혼동하지 마세요
+두 개 이상의 프러미스를 동시에 wait 하고 싶다면, 
+Promise#then을 사용하고 순차적으로 실행시키고 싶다면 async/await을 사용한다.
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/async_function
+`
+#### Example
+<pre><code>
+async function getApple() {
+    await delay(1000);
+    return '사과';
+}
+async function getBanana() {
+    await delay(1000);
+    return '바나나';
+}
+
+async function pickFruits() {
+    const applePromise = getApple();//프로미스생성
+    const bananaPromise = getBanana();
+    const apple = await applePromise;
+    const banana = await bananaPromise;
+    return `${apple} + ${banana}`;
+}
+
+pickFruits().then (console.log);//전체 소요시간 1초만 걸립니다.
+//사과 + 바나나 출력
+
+대채 useful Promise APIs 
+function pickAllFruits() {
+    return Promise.all([getApple(), getBanana()])
+    .then(fruits => fruits.join(' + ')
+    );
+}
+pickAllFuits().then(console.log);//사과 + 바나나 출력
+
+function pickOnlyOne(){
+     return Promise.race([getApple(), getBanana()]);   
+}
+
+pickOnlyone().then(console.log);//바나나만 출력됨.
+</code></pre>
