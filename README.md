@@ -19,3 +19,28 @@ ucEngine.webSocketSend( [ 'ping.sys.conn', [ 'openvc', GLOBAL.getEncData( 'devic
 ucEngine.webSocketSend( [ 'ping.sys.conn', [ 'openvc', GLOBAL.getEncData( 'device.uuid' ) ] ], 
 `##### CLIENT CONSOLE MSG : [ novideo , id = ${GLOBAL.getMyID()}, restartICEConnect param null = ${conftype}, video of selectdevice = ${selectdevice?.video?.label}] #####` );
 </code></pre>
+<br/>
+
+### Promise & Async/await
+
+#### Example
+<pre><code>
+//bad code
+function displayUser() {
+  fetchUser()
+  .then((user) => {
+    fetchProfile(user)
+    .then((profile) => {
+      updateUI(user, profile);
+    });
+  });
+}
+
+//good code
+async function displayUser() {
+  const user = await fetchUser();
+  const profile = await fetchProfile(user);
+  updateUI(user, profile);
+}
+</code></pre>
+
