@@ -1,6 +1,30 @@
 # ECMA script record
 
-### ☘️ optional chaining & Template Literals
+## ☘️ 단축평가(short-circuit evaluation)
+
+#### && 연산자를 사용해 if문을 대체할 수 있다.
+<pre><code>
+let done = true; 
+let message = ''; 
+if (done) message = '완료'; 
+message = done && '완료';
+</code></pre>
+
+####  반대로 조건의 결과값이 false일 때 무언가 동작하게 하고 싶다면 || 연산자를 사용해 if문을 대체
+<pre><code>
+let done = false; 
+let message = ''; 
+if (!done) message = '아직'; 
+message = done || '아직';
+</code></pre>
+
+####  변수가 null, undefined가 아닌지 확인한 후에 하위 속성을 참조할 때, 단축 평가를 통해 에러를 방지할 수도 있다.
+<pre><code>
+let el = null; 
+let val = el && el.val;
+</code></pre>
+
+### ♦️  optional chaining & Template Literals
 "?." => optional chaining ES11부터 도입된 연산자이다. <br/>
 표기 방식은 ?. 이런식으로 쓰는데, <br/>
 왼쪽 피연산자가 null이나 undefined면 undefined를 반환하고, 그렇지 않으면 오른쪽의 프로퍼티 참조를 실행해 반환한다. 
@@ -21,7 +45,25 @@ ucEngine.webSocketSend( [ 'ping.sys.conn', [ 'openvc', GLOBAL.getEncData( 'devic
 </code></pre>
 <br/>
 
-### ☘️ Promise & Async/await
+### null 병합 연산자(nullish coalescing)
+null 병합 연산자도 ES11부터 도입되었다. ?? 이렇게 사용하는데, 왼쪽 피연산자가 null이나 undefined면 오른쪽 피연산자를 반환하고, 아닌 경우에는 왼쪽의 피연산자를 반환한다. 변수에 기본값을 설정할 때 유용하게 쓸 수 있다.
+
+<pre><code>
+let str = null ?? 'default'; 
+console.log(str); // 'default'
+</code></pre>
+
+기존처럼 || 연산자로 기본값을 설정했을 때를 생각해보자. ||는 왼쪽 피연산자가 falsy값이면 오른쪽 피연산자를 반환했는데, falsy값으로 취급되는 0 이나 ''(빈문자열)을 넣으면  예상치 못한 결과가 나오기도 했다. 하지만 ?? 연산자를 사용하면 이런 경우를 방지할 수 있다.
+
+<pre><code>
+let str = '' || 'default'; 
+console.log(str); // 'default' 
+let str = '' ?? 'default'; 
+console.log(str); // ''
+</code></pre>
+출처: https://joooing.tistory.com/entry/단축평가-옵셔널체이닝연산자-null병합연산자?category=907322 [joooing]
+
+## ☘️ Promise & Async/await
 
 #### Example
 <pre><code>
