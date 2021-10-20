@@ -1,6 +1,6 @@
 # ECMA script record
 
-### optional chaining & Template Literals
+### ☘️ optional chaining & Template Literals
 "?." => optional chaining ES11부터 도입된 연산자이다. <br/>
 표기 방식은 ?. 이런식으로 쓰는데, <br/>
 왼쪽 피연산자가 null이나 undefined면 undefined를 반환하고, 그렇지 않으면 오른쪽의 프로퍼티 참조를 실행해 반환한다. 
@@ -21,7 +21,7 @@ ucEngine.webSocketSend( [ 'ping.sys.conn', [ 'openvc', GLOBAL.getEncData( 'devic
 </code></pre>
 <br/>
 
-### Promise & Async/await
+### ☘️ Promise & Async/await
 
 #### Example
 <pre><code>
