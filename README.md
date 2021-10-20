@@ -1,5 +1,24 @@
 # ECMA script record
 
+## ☘️ 화살표 함수 =>
+#### => 기호로 함수를 축약해서 표현하는 방식이다. 
+✔️ 자신의 this, arguments을 바인딩 하지 않고 전역의 this를 가리킨다.<br/><br/>
+화살표 함수를 이용하여 클로저를 활용할 수 있다. 
+예를 들어 ,
+<pre><code>
+function outer(a) {
+  return function inner(b) {
+    return a + b;
+  }
+}
+outer(10)(20);
+</code></pre>
+를 아래와 같이 직관적이고 간략하게 바꿀 수 있다.
+<pre><code>
+const outer = (a) => (b) => a + b;
+outer(10)(20);
+</code></pre>
+
 ## ☘️ 단축평가(short-circuit evaluation)
 
 #### && 연산자를 사용해 if문을 대체할 수 있다.
