@@ -137,6 +137,7 @@ const [one, two, three] = arr;
 // const [one, two, three]; // SyntaxError: Missing initializer in destructuring declaration
 
 console.log(one, two, three); // 1 2 3
+// 코드 출처 : https://poiemaweb.com/es6-destructuring
 </code></pre>
 
 ##### 중첩객체의 경우
@@ -151,6 +152,7 @@ const person = {
 
 const { address: { city } } = person;
 console.log(city); // 'Seoul'
+// 코드 출처 : https://poiemaweb.com/es6-destructuring
 </code></pre>
 
 #### Spread Syntax
