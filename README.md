@@ -124,6 +124,21 @@ fucntion displayPerson(person) {
 }
 </code></pre>
 
+#### Array Destructuring
+
+<pre><code>
+// ES6 Destructuring
+const arr = [1, 2, 3];
+
+// 배열의 인덱스를 기준으로 배열로부터 요소를 추출하여 변수에 할당
+// 변수 one, two, three가 선언되고 arr(initializer(초기화자))가 Destructuring(비구조화, 파괴)되어 할당된다.
+const [one, two, three] = arr;
+// 디스트럭처링을 사용할 때는 반드시 initializer(초기화자)를 할당해야 한다.
+// const [one, two, three]; // SyntaxError: Missing initializer in destructuring declaration
+
+console.log(one, two, three); // 1 2 3
+</code></pre>
+
 ##### 중첩객체의 경우
 <pre><code>
 const person = {
