@@ -124,6 +124,20 @@ fucntion displayPerson(person) {
 }
 </code></pre>
 
+##### 중첩객체의 경우
+<pre><code>
+const person = {
+  name: 'Lee',
+  address: {
+    zipCode: '03068',
+    city: 'Seoul'
+  }
+};
+
+const { address: { city } } = person;
+console.log(city); // 'Seoul'
+</code></pre>
+
 #### Spread Syntax
 <pre><code>
 //Spread Syntax - Object
