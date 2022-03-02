@@ -1,26 +1,29 @@
 
 ### Axios GET
+`axios.get(url,[,config])`<br/>
+`response : json`
+<br/>
 #### param이 있는 경우
 <pre>
 <code>
 axios.get("url", {
   params: {
-    id: 123
+    id: sorie
   }
 })
 .then((response) => {
-     // response  
+// response  
 }).catch((error) => {
-    // 오류발생시 실행
+// 오류발생시 실행
 })
    
    
 // async await 함수를 사용할 때, 
 
 try {
-	const data = await axios.get("url", params: { id: 123 });
+const data = await axios.get("url", params: { id: 123 });
 } catch {
-	// 오류 발생시 실행
+// 오류 발생시 실행
 }
 </code>
 </pre>
