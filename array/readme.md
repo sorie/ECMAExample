@@ -1,5 +1,6 @@
 
-
+## Array
+JavaScript Array 클래스는 리스트 형태의 고수준 객체인 배열을 생성할 때 사용하는 전역 객체.
 
 #### fill & map
 
