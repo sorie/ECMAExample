@@ -1,3 +1,5 @@
+## 용어정리
+
 ### 리팩터링 Refactoring
 
 리팩터링(refactoring)은 소프트웨어 공학에서 
