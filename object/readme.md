@@ -1,7 +1,8 @@
 ## object
 
 ### Object.assign()
-출처 객체들을 복사해 대상 객체에 붙여넣는다. 
+출처 객체들을 복사해 목표 객체에 붙여넣는다. 반환값은 목표 객체이다. <br/>
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 
 #### object key값에 따른 위치 및 키값 변경
 <pre>
