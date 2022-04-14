@@ -1,7 +1,9 @@
 ## object
 
+### Object.assign()
+출처 객체들을 복사해 대상 객체에 붙여넣는다. 
 
-### object key값에 따른 위치 및 키값 변경
+#### object key값에 따른 위치 및 키값 변경
 <pre>
 <code>
 let oldValues = {};
