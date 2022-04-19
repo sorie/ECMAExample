@@ -76,8 +76,7 @@ https://developer.mozilla.org/ko/docs/Glossary/Abstraction
 인스턴스란 클래스를 복제한 것으로 new 키워드를 입력하여 해당 클래스타입의 새로운 이름의 변수를 입력한다. 
 
 ### 예시 
-https://kairoyang.tistory.com/114
-
+https://im-developer.tistory.com/136
 
 
 
