@@ -37,3 +37,47 @@
 ## 프레임워크 vs 라이브러리
 - 흐름에 대한 제어 권한이 어디에 있느냐에 대한 차이가 있다.
 - 프레임워크는 전체적인 흐름에 대한 권한을 가지고 있고, 라이브러리는 사용자가 흐름에 대한 권한을 제어 하면서 필요한 상황을 가져다 사용한다.
+
+## 객체지향
+좀 더 나은 프로그램을 만들기 위한 프로그래밍 패러다임으로,
+로직을 상태(state)와 행위(behave)로 이루어진 객체로 만드는 것이라고 할 수 있다.
+## 캡슐화 
+외부에서 함부로 변수의 값을 마음대로 바꿀 수 없도록 내부의 정보를 외부로부터 은폐하는 것을 캡슐화라고 한다.
+## 추상화
+객체를 만들 때에는 복잡한 원리나 구동방식을 추상화 시켜주는 작업이 필요하다. 복잡함 속에서 필요한 관점만을 추출하는 행위를 추상화라고 한다.
+### 데이터 추상화의 장점
+- 사용자가 낮은 수준의 코드를 작성하지 않도록 도움.
+- 코드 중복 방지 및 재사용성 향상.
+- 사용자에게 영향을 끼치지 않은 채로 독립적으로 클래스의 내부 구현 변경 가능
+- 중요한 세부 정보만 사용자에게 제공하므로 응용 프로그램 또는 프로그램의 보안 향상에 도움
+
+<pre><code>
+class ImplementAbstraction {
+  // method to set values of internal members
+  set(x, y) {
+    this.a = x;
+    this.b = y;
+  }
+
+  display() {
+    console.log('a = ' + this.a);
+    console.log('b = ' + this.b);
+  }
+}
+
+const obj = new ImplementAbstraction();
+obj.set(10, 20);
+obj.display();
+// a = 10
+// b = 20
+</code></pre>
+https://developer.mozilla.org/ko/docs/Glossary/Abstraction
+## 인스턴스 
+인스턴스란 클래스를 복제한 것으로 new 키워드를 입력하여 해당 클래스타입의 새로운 이름의 변수를 입력한다. 
+
+### 예시 
+https://kairoyang.tistory.com/114
+
+
+
+
