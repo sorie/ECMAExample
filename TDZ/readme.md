@@ -1,3 +1,17 @@
+## 호이스팅
+<pre>
+<code>
+console.log(tdz);
+var tdz = 'Temporal Dead Zone';
+//결과 값 tdz
+</code>
+</pre>
+위의 코드에서 tdz(변수는) 선언되지 않았으나 값을 출력하는 것을 호이스팅 된다고 한다. <br/>
+그러면 왜 선언되지 않은 변수가 출력될 수 있는 것일까? <br/>
+그 이유는 자바스크립트 엔진은 소스코드 평가 과정을 갖기 때문이다. <br/>
+소스 평가 과정이란 변수 선언을 포함한 모든 선언문을 소스코드에서 먼저 찾아내 실행하는 단계이다. <br/>
+*let, const에서는 호이스팅이 되지 않는 것처럼 오류 메세지를 출력하지만 사실은 호이스팅 되고 있다. <br/>
+참고문서 https://github.com/Kyun2da/Javascript_Concept_Note/blob/master/conceptNote/%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85.md
 
 ## TDZ
 * Temporal Dead Zone(TDZ)
