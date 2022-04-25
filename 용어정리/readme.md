@@ -79,4 +79,39 @@ https://developer.mozilla.org/ko/docs/Glossary/Abstraction
 https://im-developer.tistory.com/136
 
 
+## 클로저
+내부함수에서 외부함수의 변수를 호출할 수 있는 범위
+<pre>
+<code>
+  var makeCounter = function() {
+      var privateCounter = 0;
+      function changeBy(val) {
+        privateCounter += val;
+      }
+      return {
+        increment: function() {
+          changeBy(1);
+        },
+        decrement: function() {
+          changeBy(-1);
+        },
+        value: function() {
+          return privateCounter;
+        }
+      }
+    };
+
+    var counter1 = makeCounter();
+    var counter2 = makeCounter();
+    alert(counter1.value()); /* 0 */
+    counter1.increment();
+    counter1.increment();
+    alert(counter1.value()); /* 2 */
+    counter1.decrement();
+    alert(counter1.value()); /* 1 */
+    alert(counter2.value()); /* 0 */
+</code>
+</pre>
+참고 문서 : https://developer.mozilla.org/ko/docs/Web/JavaScript/Closures
+
 
