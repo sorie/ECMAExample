@@ -49,7 +49,11 @@ https://csstriggers.com/
 - 추척하다보면 정확히 어느 함수의 어느 행이 문제를 발생시키는지 알 수 있다.
 - 해당 코드가 다른 코드들과 비교해서 많은 시간을 잡아 먹는지 확인 한다.
 - 예를 들어 top과 같이 요소의 기하학적인 영향을 주는 css속성을 변경하는 것은 강제 레이아웃을 발생시키기 때문에 많은 시간을 뺏는다.
-참고 사이트 : https://codingmoondoll.tistory.com/entry/%ED%81%AC%EB%A1%AC-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%8F%84%EA%B5%AC%EC%9D%98-Performance-%ED%83%AD-%EB%8B%A4%EB%A3%A8%EA%B8%B0-%EA%B8%B0%EB%B3%B8%ED%8E%B8
+참고 사이트 : https://codingmoondoll.tistory.com/entry/%ED%81%AC%EB%A1%AC-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%8F%84%EA%B5%AC%EC%9D%98-Performance-%ED%83%AD-%EB%8B%A4%EB%A3%A8%EA%B8%B0-%EA%B8%B0%EB%B3%B8%ED%8E%B8 <br>
+https://developer.chrome.com/docs/devtools/evaluate-performance/
+
+
+
 ## 렌더링 성능 최적화
 
 
