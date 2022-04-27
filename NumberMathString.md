@@ -43,7 +43,8 @@ parseInt(redColor); //NaN
 psrseInt(redColor, 16); // 243 //16진수로 변환
 parseInt('11',2) //3 //2진수로 변환
 </code></pre>
-### parseFloat() : parseInt와 동일하지만 부동소수점을 반환한다.
+### parseFloat()
+- parseInt와 동일하지만 부동소수점을 반환한다.
 
 ## String
 - 특정 위치의 접근가능.
@@ -59,4 +60,9 @@ parseInt('11',2) //3 //2진수로 변환
 
 ### str.trim(), str.repeat(n) 
 - n번 반복한다.
+
+### includes()
+- 문자가 있으면 true, 없으면 false 반환.
+
+
 
