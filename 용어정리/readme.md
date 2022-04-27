@@ -79,8 +79,8 @@ https://developer.mozilla.org/ko/docs/Glossary/Abstraction
 https://im-developer.tistory.com/136
 
 ## 호이스팅
-스코프 내부 어디서든 변수 선언은 최상위에 선언된 것 처럼 행동
-
+스코프 내부 어디서든 변수 선언은 최상위에 선언된 것 처럼 행동 <br>
+참고 : ECMAScript > TDZ
 ## 클로저
 내부함수에서 외부함수의 변수를 호출할 수 있는 범위
 <pre>
