@@ -146,4 +146,29 @@ let result = userList.reduce((prev, cur) => {
 console.log(result);
 </code></pre>
 
+## 배열 구조 분해 
+<pre><code>
+let users = ['Mike', 'Tom', 'Jane'];
+let [user1, user2, user3] = users;
+
+console.log(user1); //'Mike'
+console.log(user2); //'Tom'
+console.log(user3); //'Jane'
+
+let str = "Anne-Isac-Yu";
+let [user1, user2, user3] = str.split('-');
+
+console.log(user1);//'Anne'
+console.log(user2);//'Isac'
+console.log(user3);//'Yu'
+
+let [a,b,c] = [1,2]
+let [a=3, b=4, c=5] = [1,2]
+
+let [user1, , user2] = ['Anne', 'Isac', 'Yu', 'Jo']
+console.log(user1);
+console.log(user2);
+
+</code></pre>
+
 
