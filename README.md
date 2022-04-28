@@ -1,6 +1,32 @@
-# ECMA script record
+# ECMAscript 
+“ECMAScript is a standard.”
 
-## ☘️ 화살표 함수 =>
+“JavaScript is a standard.”
+
+“ECMAScript is a specification.”
+
+“JavaScript is an implementation of the ECMAScript standard.”
+
+“ECMAScript is standardized JavaScript.”
+
+“ECMAScript is a language.”
+
+“JavaScript is a dialect of ECMAScript.”
+
+“ECMAScript is JavaScript.”
+
+“In 『What’s the difference between JavaScript and ECMAScript?』 of Michael Aranda”
+
+ECMAScript는 Ecma 인터내셔널에 의해 제정된 ECMA-262 기술 규격에 의해 정의된 범용 스크립트 언어입니다
+Ecma인터내셔널은 정보 통신에 대한 표준을 제정하는 비영리 표준화 기구입니다.
+
+## ♦️ 둘의 관계 (js vs es)
+- JS엔진을 가진 브라우저 마다 지원되는 ECMAScript가 다릅니다.
+- JavaScript 엔진이 최신 ECMAScript의 사양을 준수하는지 아닌지는 JavaScript 엔진을 담당하는 회사나 조직(Google, Mozilla, Microsoft 등)의 업데이트에 따라 달려있습니다.
+- 새 버전의 ECMAScript가 나오면 JavaScript 엔진을 통째로 업데이트하지는 않고, 새로 추가된 ECMAScript 기능을 점진적으로 업데이트합니다.
+
+## ☘️ 기초 문법 
+## 화살표 함수 =>
 #### => 기호로 함수를 축약해서 표현하는 방식이다. 
 ✔️ 자신의 this, arguments을 바인딩 하지 않고 전역의 this를 가리킨다.<br/><br/>
 화살표 함수를 이용하여 클로저를 활용할 수 있다. 
@@ -19,7 +45,7 @@ const outer = (a) => (b) => a + b;
 outer(10)(20);
 </code></pre>
 
-## ☘️ 단축평가(short-circuit evaluation)
+## 단축평가(short-circuit evaluation)
 
 #### && 연산자를 사용해 if문을 대체할 수 있다.
 <pre><code>
@@ -37,13 +63,13 @@ if (!done) message = '아직';
 message = done || '아직';
 </code></pre>
 
-####  변수가 null, undefined가 아닌지 확인한 후에 하위 속성을 참조할 때, 단축 평가를 통해 에러를 방지할 수도 있다.
+#### 변수가 null, undefined가 아닌지 확인한 후에 하위 속성을 참조할 때, 단축 평가를 통해 에러를 방지할 수도 있다.
 <pre><code>
 let el = null; 
 let val = el && el.val;
 </code></pre>
 
-### ♦️  optional chaining & Template Literals
+### optional chaining & Template Literals
 "?." => optional chaining ES11부터 도입된 연산자이다. <br/>
 표기 방식은 ?. 이런식으로 쓰는데, <br/>
 왼쪽 피연산자가 null이나 undefined면 undefined를 반환하고, 그렇지 않으면 오른쪽의 프로퍼티 참조를 실행해 반환한다. 
@@ -83,7 +109,7 @@ console.log(str); // ''
 출처: https://joooing.tistory.com/entry/단축평가-옵셔널체이닝연산자-null병합연산자?category=907322 [joooing]
 
 
-## ☘️ map && filter 
+## map && filter 
 
 <pre><code>
 const devices = [
@@ -98,7 +124,7 @@ console.log(`dev test devices : ${JSON.stringify(newdevices)}`);
 //dev test devices : ["Integrated Webcam (0bda:5689)","test Webcam (0bda:5689)"]
 </code></pre>
 
-## ☘️ Basic
+## Basic
 
 #### Object Destructuring
 
@@ -202,7 +228,7 @@ combined = [...fruits, ...fruits2);
             
 </code></pre>
 
-## ☘️ Promise & Async/await
+## Promise & Async/await
 
 #### Example
 <pre><code>
