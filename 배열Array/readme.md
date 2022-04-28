@@ -97,6 +97,53 @@ console.log(result); //leesack
 ### arr.join(str)
 - 배열값을 str을 사이에 두고 합쳐서 문자로 반환한다.
 
-  
+### arr.isArray()
+
+### arr.sort(), arr.sort(fn)
+<pre><code>
+let arr = [27, 8, 5, 13];
+
+function fn(a, b) {
+    return a - b;
+}
+
+arr.sort(fn);
+console.log(arr);
+</code></pre>
+* Lodash
+
+### arr.reduce()
+- 배열의 모든수 합친값을 반환
+<pre><code>
+let arr [1, 2, 3, 4, 5]
+
+const result = arr.reduce((prev, cur) => {
+    return prev + cur;
+}, 0);
+
+console.log(rsult);
+
+let userList = [
+  { name: 'anne', age: 33 },
+  { name: 'leesack', age: 25 },
+  { name: 'yu', age: 8 }
+];
+// 성인찾기
+let result = userList.reduce((prev, cur) => {
+    if(cur.age > 19) {
+        prev.push(cur.name);
+    }
+    return prev;
+}, []);
+
+console.log(result);
+
+//나이합치기
+let result = userList.reduce((prev, cur) => {
+    return prev += cur.age;
+}, 0);
+
+console.log(result);
+</code></pre>
 
 
