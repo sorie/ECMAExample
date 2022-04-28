@@ -17,7 +17,7 @@
 
 “In 『What’s the difference between JavaScript and ECMAScript?』 of Michael Aranda”
 
-ECMAScript는 Ecma 인터내셔널에 의해 제정된 ECMA-262 기술 규격에 의해 정의된 범용 스크립트 언어입니다
+ECMAScript는 Ecma 인터내셔널에 의해 제정된 ECMA-262 기술 규격에 의해 정의된 범용 스크립트 언어이며
 Ecma인터내셔널은 정보 통신에 대한 표준을 제정하는 비영리 표준화 기구입니다.
 
 ## ♦️ 둘의 관계 (js vs es)
