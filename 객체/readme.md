@@ -194,5 +194,12 @@ for (let key in user) {
 }
 </code></pre>
 
+## 객체 구조 분해
+<pre><code>
+let user = {name: 'Mike', age: 30};
+let {name, age} = user;
 
+console.log(name);
+console.log(age);
+</code></pre>
 
