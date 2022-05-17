@@ -37,8 +37,8 @@
   ### 참고 문헌
   - https://semver.org/lang/ko 
   - https://semver.org
-- https://velog.io/@slaslaya/Semantic-Versioning-2.0.0-MAJOR-MINOR-PATCH%EC%99%80-%EB%AA%85%EC%84%B8%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC
-- http://seorenn.blogspot.com/2012/02/version.html
+  - https://velog.io/@slaslaya/Semantic-Versioning-2.0.0-MAJOR-MINOR-PATCH%EC%99%80-%EB%AA%85%EC%84%B8%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC
+  - http://seorenn.blogspot.com/2012/02/version.html
 
 
 
