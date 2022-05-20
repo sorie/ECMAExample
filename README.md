@@ -293,3 +293,17 @@ function pickOnlyOne(){
 
 pickOnlyone().then(console.log);//바나나만 출력됨.
 </code></pre>
+
+### promise.all
+promise는 동기지만 .then을 사용하면 비동기가 된다. 병렬 형식의 비동기로 호출하고 싶다면 promise.all을 사용한다. 즉 순서대로 실행되지만 앞에 함수가 끝나는 것을 기다려주지 않는다.
+그리고 마지막 함수가 끝날때까지 기다리다가 반환한다.
+- 중간에 어떤 함수가 에러가 났을때 즉시 에러를 반환한다. 예를 들어, await으로 각각을 실행했을때 첫번째 함수의 시간을 전부 채우고 에러를 반환하는 반면 promise.all은 에러즉시 반환한다. 그리고 다른 함수가 실행되기 전에 에러 발생시 즉시 반환되는 것이다.
+
+### Promise.allSettled()
+- 메서드는 주어진 모든 프로미스를 이행하거나 거부한 후, 각 프로미스에 대한 결과를 나타내는 객체 배열을 반환.
+- 일반적으로 서로의 성공 여부에 관련 없는 여러 비동기 작업을 수행해야 하거나, 항상 각 프로미스의 실행 결과를 알고 싶을 때 사용.
+
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled
+
+
+
