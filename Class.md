@@ -1,3 +1,44 @@
+
+## 정적 메서드 Static
+- 정적 메서드는 클래스의 인스턴스 없이 호출이 가능하기에, 보통 유틸리티 함수를 만드는데 사용된다.
+
+<pre><code>
+// 예제 유틸리티 함수
+class Util {
+  static generateRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min
+  }
+}
+
+console.log(Util.generateRandomNumber(1, 10))
+</code></pre>
+
+- 정적 메서드는 클래스의 데이터를 가져오지 못하고 객체의 인스턴스를 생성해도 정적 메서드는 클래스의 데이터를 가져오지 못한다.
+
+<pre><code>
+// 클래스 데이터 접근 예제
+class Person {
+  constructor() {
+    this._name = "KIM";
+  }
+
+  static get name(){
+    return this._name
+  }
+
+}
+
+// 1. 정적 메서드를 이용해 클래스 데이터 가져오기 - 실패
+console.log(Person.name)  // undefined
+
+// 2. 클래스 인스턴스를 선언해 클래스 데이터 가져오기 - 실패
+const person = new Person();
+console.log(person.name)  // undefined
+</code></pre>
+
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes/static
+
+
 ## 파생 클래스를 사용한 상속
 ECMAScript 6 이전에는 사용자 정의 타입으로 상속을 구현할때 대규모 과정이 필요했습니다. 적절한 상속에는 여러 단계가 필요했습니다. 예를 들어 다음 예제를 살펴보겠습니다.
 
