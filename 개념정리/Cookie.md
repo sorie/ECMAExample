@@ -13,6 +13,8 @@
 3. 서버는 브라우저가 보낸 요청 헤더의 섹션 식별자를 읽어 사용자를 식별한다.
 
 
+
+
 참고문헌:
 https://ko.javascript.info/cookie
 나중에 참고할 자료 
@@ -21,4 +23,5 @@ https://developers.google.com/analytics/devguides/collection/gtagjs/cookies-user
 
 
 
+로컬 스토리지 
 
