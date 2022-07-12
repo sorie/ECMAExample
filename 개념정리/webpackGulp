@@ -1,0 +1,17 @@
+### Webpack vs Gulp
+
+#### Webpack : Package.json의 script를 기반으로 동작하는 Package Bundler.
+Javascript Bundle 위한 Package Bundler이고 목적은 종속성을 가진 어플리케이션모듈을 정적인 소스들로 생산하는 것.
+
+#### Gulp : gulpfile 파일을 기반으로 실행하는 Task Runner.
+Work Flow을 자동화 및 향상할 수 있는 도구.
+반복되는 작업들이나 시간이 많이 들어가는 작업을 자동화하여 쉽게 처리.
+Webpack에 비해 Learning Culve가 낮기 때문에 사용하기 쉬운 편, 코드에 대한 가독성이 좋다.
+대신 Webpack과 같이 모든 모듈에 대한 종속성 관리가 이루어지지 않기에 규모가 큰 프로젝트에서 패키지화하기가 쉽지 않다고 한다.
+
+사용성 측면에서 Gulp가 Webpack 보다 유연하고 작업을 정의하고 실행하는 것이 훨씬 쉽고, 
+반면에 Webpack의 구성 옵션은 훨씬 더 유연하고 빠르게 지속적으로 개발되고 있으며 커뮤니티 규모가 커져 Gulp보다 정보를 얻기가 쉽다 한다. 
+또한 Webpack은 대규모 프로젝트에, Gulp는 소규모 프로젝트에 어울리는 것 같다.
+
+#### 참고문헌
+- https://velog.io/@qortmdalsdl/Webpack-vs-Gulp
