@@ -116,4 +116,16 @@ https://im-developer.tistory.com/136
 </pre>
 참고 문서 : https://developer.mozilla.org/ko/docs/Web/JavaScript/Closures
 
+## Bundler
+애플리케이션에 필요한 모든 종류의 파일들을 모듈 단위로 나누어 최소한의 파일 묶음(번들)으로 만들어 낸다. 
+번들러는 대표적으로 Webpack, Parcel, Rollup, Browserify등이 있다.
+
+1. 네트워크 병목 현상 해결 - 여러 파일을 최적화 해서 하나의 파일로 묶기 때문에 주고 받는 파일의 크기를 줄여줆
+2. 모듈 단위 코딩 - 유지 보수가 편함, 코드의 가독성 향상
+3. 다양한 서드파티 기능 이용
+- Webpack의 경우 Babel-loader과 같은 다양한 로더를 이용해서 모던 자바스크립트나 SASS를 사용할 수 있다.
+
+## migration
+마이그레이션, 이주(移住) 정보기술에서, 마이그레이션이란 한 운영환경으로부터, 대개의 경우 좀더 낫다고 여겨지는 다른 운영환경으로 옮겨가는 과정.
+
 
