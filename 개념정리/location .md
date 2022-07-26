@@ -24,7 +24,7 @@ location.reload(true);
 `
 
 3. replace
-assign하고 하는 역할은 비슷하나 history 세션 관리가 되지 않는다. 
+assign 하고 하는 역할은 비슷하나 history 세션 관리가 되지 않는다. 
 (뒤로가기, 앞으로가기 기능 구현 불가)
 
 4. toString
