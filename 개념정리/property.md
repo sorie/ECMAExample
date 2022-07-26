@@ -1,5 +1,5 @@
 
-1. method
+## method vs property
 
 `javascript 에서 method 는 함수로 된 property이다.`
 
