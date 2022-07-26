@@ -9,6 +9,7 @@
 `
 location.assign('vc.dial070.co.kr');
 `
+
 파라미터로 적은 URL로 리다이렉트 시킨다. 
 history관리가 된다. (뒤로가기, 앞으로 가기 기능 구현 가능)
 
