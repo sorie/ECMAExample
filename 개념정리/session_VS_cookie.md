@@ -12,6 +12,81 @@
 만료기간을 따로 지정해 쿠키를 삭제할 때까지 유지할 수 있다. 
 세션도 만료기간을 정할 수는 잇지만, 브라우저가 종료되면 만료기간에 상관없이 삭제된다. 
 
+<pre>
+<code>
+// es6 script
+const userCookie = UserCookieManager?.getInstance();
+const { regist_dt, service_type } = response.message[0];
+userCookie.setAll(mailValue,pwd,regist_dt,service_type);
+
+// classes
+class UserCookieManager {
+	static #userInfo = new UserCookieManager();
+
+	static getInstance() {
+		if(this.#userInfo === null) {
+			this.#userInfo = new UserCookieManager();
+			return this.#userInfo;
+		} else {
+			return this.#userInfo;
+		}
+	}
+	constructor() {
+		this.u_email = this.getUserCookie('u_email');
+		this.u_pwd = this.getUserCookie('u_pwd');
+		this.reg_dt = this.getUserCookie('reg_dt');
+		this.service_type = this.getUserCookie('service_type');
+	}
+
+	getEmail(){
+		return this.u_email;
+	}
+	setAll(email,password,date,st){
+		this.u_email = email;
+		this.u_pwd = password;
+		this.reg_dt = date;
+		this.service_type = st;
+		this.setUserCookie();
+	}
+	setEmail(email) {
+		this.u_email = email;
+		this.setUserCookie();
+	}
+	setPassword(pwd) {
+		this.u_pwd = pwd;
+		this.setUserCookie();
+	}
+	setRegistDate(date) {
+		this.reg_dt = date;
+		this.setUserCookie();
+	}
+	setServiceType(st) {
+		this.service_type = st;
+		this.setUserCookie();
+	}
+
+	setUserCookie() {
+		var date = new Date();
+		date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000)); //7 day
+		var expires = "; expires=" + date.toUTCString();
+		document.cookie = "usr=" + (JSON.stringify(this) || "") + expires + "; path=/";
+	}
+	getUserCookie(key) {
+		var name = "usr=";
+		var ca = document.cookie.split(';');
+		for (var i = 0; i < ca.length; i++) {
+			var c = ca[i].trim();
+			if (c.indexOf(name) == 0) {
+				var u_item = c.substring(name.length, c.length);
+				return JSON.parse(u_item)[key];
+			}
+		}
+		return null
+	}
+}
+</code>
+</pre>
+
 ### 그외
 속도 면에서 쿠키가 더 우수하다. 세션은 정보가 서버에 있기 때문에 비교적 느리다.
 
