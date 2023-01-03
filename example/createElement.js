@@ -2,8 +2,8 @@ function createH1(props) {
   return [document.createElement('h1')]
   .map(element => {
     Object
-    .entries{ ...props, 'data-id': 'subject' })
-    .forEach({[name, value]) => element.setAttribute(name, value))
+    .entries({ ...props, 'data-id': 'subject' })
+    .forEach(([name, value]) => element.setAttribute(name, value))
     return element;
   })[0];
 }
@@ -13,7 +13,7 @@ function createDiv(props) {
   .map(element => {
     Object
     .entries({ ...props, 'data-id': 'layout' })
-    .forEach({[name, value]) => element.setAttribute(name, value))
+    .forEach(([name, value]) => element.setAttribute(name, value))
     return element;
   })[0];
 }
@@ -23,6 +23,5 @@ const createMap = {
   div: createDiv,
 };
 
-function createElementtype, props) {
-  return createMap[type](props);
-}
+const coupler = map => (type, props) => map[type](props);
+const createElement = coupler(createMap);
