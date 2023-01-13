@@ -57,6 +57,83 @@ https://developer.chrome.com/docs/devtools/evaluate-performance/
 
 ## 렌더링 성능 최적화
 
+### virture DOM 
+dom에 추상화 개념을 더해 만든 dom이다. 빈번한 reflow와 repaint를 덜 발생시켜 최적의 성능을 보인다.
+
+### What forces layout / reflow
+강제로 한줄한줄 reflow 시키는 동작들이 있다.
+- focus()
+- scrollBy()
+- innerText()
+https://blog.drakejin.me/React-VirtualDOM-And-Repaint-Reflow/
+
+#### 성능 튜닝방법 예시
+1. 모범 사례 레이아웃 기술 사용
+인라인 스타일은 html 다운로드 될 때 레이아웃에 영향을 미치고 추가 리플로우를 트리거 한다.
+파서가 셀 크기를 계산하기 위해서는 두번 이상의 패스가 필요하기 때문에 테이블은 비용이 많이 든다. table-layout: fixed를 하면 좋다.
+2. CSS 규칙 수 최소화
+사용하는 규칙이 적을수록 리플로우가 빨라진다. 가능한 경우 복잡한 CSS 선택기도 피해야 한다.
+Bootstrap과 같은 프레임워크를 사용하는 경우 특히 문제가 될 수 있다. Unused CSS , uCSS , grunt-uncss 및 gulp-uncss 와 같은 도구는 스타일 정의 및 파일 크기를 크게 줄일 수 있다.
+.
+.
+.
+7. 일괄 업데이트 요소
+단일 작업으로 모든 DOM 요소를 업데이트하여 성능을 향상시킬 수 있다. 이 간단한 예는 세 가지 리플로우를 유발한다.
+
+<pre>
+<code>
+var myelement = document.getElementById('myelement');
+myelement.width = '100px';
+myelement.height = '200px';
+myelement.style.margin = '10px';
+</code>
+</pre>
+
+유지 관리가 더 쉬운 단일 리플로우로 이를 줄일 수 있다.
+
+<pre>
+<code>
+var myelement = document.getElementById('myelement');
+myelement.classList.add('newstyles');
+.newstyles {
+	width: 100px;
+	height: 200px;
+	margin: 10px;
+}
+</code>
+</pre>
+
+DOM을 터치해야 하는 시간을 최소화할 수도 있다. 이 글머리기호 목록을 만들고 싶다고 가정해 보겠다.
+
+<pre>
+<code>
+항목 1
+항목 2
+항목 3
+</code>
+</pre>
+
+각 요소를 한 번에 하나씩 추가하면 최대 7개의 리플로우가 발생한다. <ul>가 추가될 때 1개, 각각에 대해 <li>3개, 텍스트에 대해 3개가 추가된다. 그러나 DOM 조각을 사용하여 단일 리플로우를 구현하고 먼저 메모리에 노드를 구축할 수 있다.
+
+<pre>
+<code>
+var
+	i, li,
+	frag = document.createDocumentFragment(),
+	ul = frag.appendChild(document.createElement('ul'));
+
+for (i = 1; i <= 3; i++) {
+	li = ul.appendChild(document.createElement('li'));
+	li.textContent = 'item ' + i;
+}
+
+document.body.appendChild(frag);
+</code>
+</pre>
+ 
+
+참고 사이트
+https://www.sitepoint.com/10-ways-minimize-reflows-improve-performance/
 
 
 
